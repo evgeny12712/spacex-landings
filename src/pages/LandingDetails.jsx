@@ -57,13 +57,15 @@ export class LandingDetails extends Component {
 
   render() {
     const { landing } = this.state;
-    console.log(landing, 'landing');
     if (!landing) return <div>Loading..</div>;
     return (
       <section className="landing-details flex column auto-center">
         <h1 className="details-title">{landing.name}</h1>
         <img src={landing.imgUrl} alt="landings" />
         <section className="details-info flex column auto-center">
+          <div className="date-row">
+            <span>Date : </span> {new Date(landing.date).toLocaleString()}
+          </div>
           <div>{this.failures()}</div>
           <div className="wikipedit-page">
             <span>Wikipedia Page : </span>

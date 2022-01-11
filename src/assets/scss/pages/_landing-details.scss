@@ -12,6 +12,11 @@
 
   & .details-info {
     gap: 20px;
+    & .date-row {
+      & span {
+        font-weight: 600;
+      }
+    }
     & .wikipedit-page {
       & span {
         font-weight: 600;

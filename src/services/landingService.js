@@ -66,6 +66,7 @@ function _createDataObject(data) {
         return {
             id: landing.id,
             name: landing.name,
+            date: landing.date_local,
             isSuccess: landing.success,
             imgUrl: landing.links.patch.large,
             failures: landing.failures,
