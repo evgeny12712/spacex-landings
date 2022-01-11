@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { landingService } from '../services/landingService';
-
+import { LandingFailures } from '../cmps/LandingFailures';
 export class LandingDetails extends Component {
   state = {
     landing: null,
@@ -25,36 +25,6 @@ export class LandingDetails extends Component {
     this.props.history.push('/');
   };
 
-  failures = () => {
-    return this.state.landing.failures.length ? (
-      this.state.landing.failures.map((failure) => {
-        return (
-          <div className="failures flex column auto-center" key={this.state.landing.id + Math.random()}>
-            <h1 className="failures-title">Failures :</h1>
-            <section className="failures-container flex column">
-              <div>
-                <span>Reason: </span>
-                {failure.reason}
-              </div>
-              <div>
-                <span>Time : </span>
-                {failure.time}
-              </div>
-              {failure.altitude && (
-                <div>
-                  <span>Altitude: </span>
-                  {failure.altitude}
-                </div>
-              )}
-            </section>
-          </div>
-        );
-      })
-    ) : (
-      <div></div>
-    );
-  };
-
   render() {
     const { landing } = this.state;
     if (!landing) return <div>Loading..</div>;
@@ -66,7 +36,7 @@ export class LandingDetails extends Component {
           <div className="date-row">
             <span>Date : </span> {new Date(landing.date).toLocaleString()}
           </div>
-          <div>{this.failures()}</div>
+          <LandingFailures failures={landing.failures} />
           <div className="wikipedit-page">
             <span>Wikipedia Page : </span>
             <a href={landing.wikiLink}>{landing.wikiLink}</a>
@@ -77,9 +47,9 @@ export class LandingDetails extends Component {
           height="315"
           src={`https://www.youtube.com/embed/${landing.video}`}
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
         <button onClick={this.onGoBack} className="details-back-btn">
           Back
