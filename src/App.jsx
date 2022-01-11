@@ -13,7 +13,7 @@ export function App() {
         <main className="container">
           <Switch>
             <Route component={LandingDetails} path="/landing/:id" />
-            <Route exactcomponent={LandingApp} path="/" />
+            <Route component={LandingApp} path="/" />
           </Switch>
         </main>
       </div>

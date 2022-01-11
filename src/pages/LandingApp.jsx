@@ -16,14 +16,11 @@ export class LandingApp extends Component {
   async loadLandings() {
     const { filterBy, pagination } = this.state;
     const landings = await landingService.query(filterBy, pagination);
-    console.log(landings);
     this.setState({ landings });
   }
 
   onChangeFilter = (filterBy) => {
     this.setState({ filterBy }, this.loadLandings);
-
-    // this.loadLandings()
   };
 
   setPageIdx = (pageIdx) => {
@@ -32,7 +29,6 @@ export class LandingApp extends Component {
       () => this.loadLandings()
     );
   };
-  componentWillUnmount() {}
 
   render() {
     const { landings, pagination } = this.state;

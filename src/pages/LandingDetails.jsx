@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { landingService } from '../services/landingService';
 
 export class LandingDetails extends Component {
@@ -30,7 +29,7 @@ export class LandingDetails extends Component {
     return this.state.landing.failures.length ? (
       this.state.landing.failures.map((failure) => {
         return (
-          <div className="failures flex column auto-center">
+          <div className="failures flex column auto-center" key={this.state.landing.id + Math.random()}>
             <h1 className="failures-title">Failures :</h1>
             <section className="failures-container flex column">
               <div>
@@ -58,11 +57,12 @@ export class LandingDetails extends Component {
 
   render() {
     const { landing } = this.state;
+    console.log(landing, 'landing');
     if (!landing) return <div>Loading..</div>;
     return (
       <section className="landing-details flex column auto-center">
         <h1 className="details-title">{landing.name}</h1>
-        <img src={landing.imgUrl} alt="landings-image" />
+        <img src={landing.imgUrl} alt="landings" />
         <section className="details-info flex column auto-center">
           <div>{this.failures()}</div>
           <div className="wikipedit-page">
