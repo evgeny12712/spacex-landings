@@ -1,0 +1,50 @@
+.landing-details {
+  margin-block-start: 20px;
+  gap: 30px;
+  & .details-title {
+    font-size: rem(30px);
+    font-weight: 600;
+  }
+
+  & img {
+    width: 300px;
+  }
+
+  & .details-info {
+    gap: 20px;
+    & .wikipedit-page {
+      & span {
+        font-weight: 600;
+      }
+    }
+    & .failures {
+      gap: 10px;
+      & .failures-title {
+        font-size: rem(18px);
+        font-weight: 600;
+      }
+      & .failures-container {
+        gap: 10px;
+        border: 1px solid rgb(167, 167, 167);
+        padding: 5px;
+      }
+      & div span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  & .details-back-btn {
+    border: 0;
+    padding: 10px 20px;
+    color: whitesmoke;
+    background-color: #505050;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    &:hover {
+      color: #505050;
+      background-color: whitesmoke;
+      border: 1px solid #505050;
+    }
+  }
+}
