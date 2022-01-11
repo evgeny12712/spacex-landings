@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/spacex-landings/static/css/main.5200b2a4.css",
-    "main.js": "/spacex-landings/static/js/main.dafc7629.js",
+    "main.js": "/spacex-landings/static/js/main.5faa0532.js",
     "static/js/787.190dfac4.chunk.js": "/spacex-landings/static/js/787.190dfac4.chunk.js",
     "static/media/logo.png": "/spacex-landings/static/media/logo.b8f281ea7a8013d766e9.png",
     "index.html": "/spacex-landings/index.html",
     "main.5200b2a4.css.map": "/spacex-landings/static/css/main.5200b2a4.css.map",
-    "main.dafc7629.js.map": "/spacex-landings/static/js/main.dafc7629.js.map",
+    "main.5faa0532.js.map": "/spacex-landings/static/js/main.5faa0532.js.map",
     "787.190dfac4.chunk.js.map": "/spacex-landings/static/js/787.190dfac4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5200b2a4.css",
-    "static/js/main.dafc7629.js"
+    "static/js/main.5faa0532.js"
   ]
 }
