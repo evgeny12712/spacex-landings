@@ -1,5 +1,6 @@
 import { storageService } from './storageService.js'
 import axios from 'axios';
+
 export const landingService = {
     query,
     getById,
@@ -8,13 +9,10 @@ export const landingService = {
 
 const KEY = 'landings'
 
-
-var gLandings;
 var gNumOfItems = 0;
 
 async function query(filterBy, paging) {
     let landingsData = await _getData();
-    gLandings = landingsData;
     let landingsToReturn = _createDataObject(landingsData);
     gNumOfItems = landingsToReturn.length
     if (filterBy && filterBy.isSucceed != null) {
