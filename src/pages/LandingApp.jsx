@@ -47,11 +47,11 @@ export class LandingApp extends Component {
       }
     }
 
-    if (!landings) return <div>Loading...</div>;
+    // if (!landings) return <div>Loading...</div>;
     return (
       <section className="landing-app">
         <LandingFilter onChangeFilter={this.onChangeFilter} />
-        <LandingList landings={landings} />
+        {landings ? <LandingList landings={landings} /> : <div>No landings to show...</div>}
         <ul className="pages-list flex auto-center wrap">{landings && pagesList}</ul>
       </section>
     );
