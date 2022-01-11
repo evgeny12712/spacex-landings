@@ -26,7 +26,10 @@ export class LandingApp extends Component {
   setPageIdx = (pageIdx) => {
     this.setState(
       (prevState) => ({ pagination: { ...prevState.pagination, pageIdx } }),
-      () => this.loadLandings()
+      () => {
+        this.loadLandings();
+        window.scrollTo(0, 0);
+      }
     );
   };
 
@@ -39,7 +42,7 @@ export class LandingApp extends Component {
       for (let i = 1; i < numOfPages; i++) {
         pagesList.push(
           <li key={`${numOfPages * Math.random()}`}>
-            <button className="page-btn" onClick={() => this.setPageIdx(i)}>
+            <button className={i === pagination.pageIdx ? 'active' : 'page-btn'} onClick={() => this.setPageIdx(i)}>
               {i}
             </button>
           </li>

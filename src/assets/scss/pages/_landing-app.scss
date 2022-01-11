@@ -1,18 +1,26 @@
 .landing-app {
   & .pages-list {
-    gap: 5px;
-    & li .page-btn {
+    gap: 10px;
+    & button {
       border: 0;
-      padding: 5px;
+      padding: 10px 15px;
       font-size: rem(16px);
+      border-radius: 8px;
+    }
+    & li .page-btn {
       background: #1f1f1f;
-      color: whitesmoke;
+      color: white;
       border: 1px solid transparent;
       &:hover {
-        background: whitesmoke;
+        background: white;
         color: #1f1f1f;
         border: 1px solid #1f1f1f;
       }
+    }
+    & .active {
+      background: rgb(255, 255, 255);
+      color: #1f1f1f;
+      border: 1px solid #1f1f1f;
     }
   }
 }
