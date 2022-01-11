@@ -1,0 +1,3 @@
+# https://www.landingstxt.org/landingstxt.html
+User-agent: *
+Disallow:
