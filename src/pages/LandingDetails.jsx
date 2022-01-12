@@ -31,7 +31,7 @@ export class LandingDetails extends Component {
     if (!landing) return <div>Loading..</div>;
     return (
       <section className="landing-details flex column auto-center">
-        {landing.images ? <ImageCarousel images={landing.images} /> : <img src={landing.tagUrl} alt="landings" />}
+        {landing.images.length ? <ImageCarousel images={landing.images} /> : <img src={landing.tagUrl} alt="landings" />}
         <section className="details-info flex column auto-center">
           <div className="date-row">
             <span>Date : </span> {new Date(landing.date).toLocaleString()}
