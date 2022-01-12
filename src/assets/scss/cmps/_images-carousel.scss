@@ -1,0 +1,30 @@
+.image-carousel {
+  position: relative;
+  max-height: 500px;
+
+  & .image {
+    border-radius: 10px;
+  }
+
+  .arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    font-size: 50px;
+    transform: translateY(-50%);
+    color: #000;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    font-size: 3em;
+    transform: translateY(-50%);
+    color: #000;
+    cursor: pointer;
+    user-select: none;
+  }
+}

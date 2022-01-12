@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { landingService } from '../services/landingService';
 import { LandingFailures } from '../cmps/LandingFailures';
+import { ImageCarousel } from '../cmps/ImageCarousel';
 export class LandingDetails extends Component {
   state = {
     landing: null,
@@ -30,8 +31,7 @@ export class LandingDetails extends Component {
     if (!landing) return <div>Loading..</div>;
     return (
       <section className="landing-details flex column auto-center">
-        <h1 className="details-title">{landing.name}</h1>
-        <img src={landing.imgUrl} alt="landings" />
+        {landing.images ? <ImageCarousel images={landing.images} /> : <img src={landing.tagUrl} alt="landings" />}
         <section className="details-info flex column auto-center">
           <div className="date-row">
             <span>Date : </span> {new Date(landing.date).toLocaleString()}

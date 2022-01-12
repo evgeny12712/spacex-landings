@@ -50,7 +50,6 @@ export class LandingApp extends Component {
       }
     }
 
-    // if (!landings) return <div>Loading...</div>;
     return (
       <section className="landing-app">
         <LandingFilter onChangeFilter={this.onChangeFilter} />
